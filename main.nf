@@ -32,13 +32,13 @@ workflow {
     flye(nanoq.out.combine(ch_genome_size))
     // Polishing using medaka
     medaka(nanoq.out.join(flye.out.contigs))
-    //Evaluate contigs completeness
+    // Evaluating contigs completeness
     if (params.busco) {
         busco(medaka.out)
     }
-    //Evaluate contigs contiguity
+    // Evaluating contigs contiguity
     quast(medaka.out.map{it -> it[1]}.collect())
-    // Reconstruct chromosome and plasmid from the assembly
+    // Reconstructing chromosome and plasmid from the assembly
     if (params.plasmid) {
         mob_recon(medaka.out)
         staramr_ch = mob_recon.out.contigs.flatten()
@@ -46,6 +46,6 @@ workflow {
         staramr_ch = medaka.out.map{it -> it[1]}
     }
     
-    // Find genes of interest, AMR, MLST
+    // Finding genes of interest, AMR, MLST
     staramr(staramr_ch.collect())
 }
