@@ -12,5 +12,5 @@ Simple nextflow script to run de-novo assembly on nanopore data with Flye and po
 ## Usage
 
 ```
-nextflow run thanhleviet/nf-campy-nanopore --reads "/path/to/folder/of/*.fastq.gz" --outdir "/path/to/output" -profile conda
+nextflow run thanhleviet/nf-nanopore-assembly --reads "/path/to/folder/of/*.fastq.gz" --outdir "/path/to/output" -profile conda
 ```
