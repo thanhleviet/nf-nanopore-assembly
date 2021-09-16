@@ -1,3 +1,5 @@
+Simple nextflow script to run de-novo assembly on nanopore data with Flye and polishing the assembly with medaka.
+
 ## Requirements
 
 - conda and mamba or docker for managing bioinformatics software
