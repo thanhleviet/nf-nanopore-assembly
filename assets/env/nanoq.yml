@@ -1,0 +1,7 @@
+name: nanoq
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - nanoq=0.2.1

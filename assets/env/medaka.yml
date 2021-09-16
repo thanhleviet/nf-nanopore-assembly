@@ -1,0 +1,8 @@
+name: medaka
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python >=3.8
+  - medaka >=1.4.3
