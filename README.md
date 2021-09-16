@@ -1,4 +1,4 @@
-Simple nextflow script to run de-novo assembly on nanopore data with Flye and polishing the assembly with medaka.
+Simple nextflow script to run de-novo assembly on nanopore data with Flye and polish the assembly with medaka.
 
 ## Requirements
 
