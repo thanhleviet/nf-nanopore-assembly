@@ -123,10 +123,10 @@ process mob_recon {
   publishDir "${params.outdir}/${task.process.replaceAll(":","_")}", mode: "copy",
     saveAs: { filename -> if (filename.endsWith(".tsv")){ 
                 "report/${filename}"  } 
-            else if (filename.isDirectory())
+            else if (file(filename).isDirectory())
                 {"${filename}"} 
             else { 
-                null
+                "${filename}"
             }
     }
   
