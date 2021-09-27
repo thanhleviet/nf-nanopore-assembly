@@ -77,8 +77,6 @@ process staramr {
     
     cpus 8
 
-    memory '64.GB'
-
     input:
     path(contigs)
     output:
